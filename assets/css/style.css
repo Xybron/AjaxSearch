@@ -1,0 +1,114 @@
+#userPage {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    margin-top: 5%;
+}
+
+#userPage .col {
+    margin: 0 auto;
+}
+
+.myFullScreen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #780206;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #780206, #061161);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #780206, #061161);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.rfullscreen {
+    height: 100vh;
+}
+
+.fSub button {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.fOpt {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.fOpt a {
+    margin-left: 2%;
+}
+
+.humb {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.emList {
+    margin-top: 4%;
+}
+
+.emCase * {
+    height: auto;
+}
+
+.emCase:hover {
+    transform: scale(1.025);
+    cursor: pointer;
+}
+
+.emCase {
+    height: 100px;
+    transition: transform 0.4s ease-in-out;
+}
+
+.emCase img {
+    height: inherit;
+}
+
+.emCase .card-image {
+    width: 20%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.emCase .card-content {
+    text-overflow: ellipsis;
+}
+
+.emCase .card-action {
+    padding: 4%;
+    border: 0;
+}
+
+.emdetails .row {
+    width: 100%;
+    min-height: 300px;
+}
+
+.emdetails .map {
+    background-color: #f0f0f0;
+    height: 400px;
+    width: 100%;
+}
+
+.emdetails .deets {}
+
+#map {
+    height: 400px;
+}
+
+input {
+    color: black;
+}
+
+.per {
+    height: 15%;
+}
