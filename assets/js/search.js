@@ -60,6 +60,7 @@
 
              var htmlElem, colElem;
              searchRes.empty();
+             searchRes.html("<p>Found " + response.dataSize + " people</p>");
              for (var i = 0; i < response.dataSize; i++) {
                  console.log('Fetched username : ' + response.user_name[i]);
                  colElem = 'c' + i;
@@ -81,7 +82,9 @@
          //Or else when theres an error, this callbackfunction is called.
          error: function() {
              console.log("Couldnt transfer data.");
-             searchRes.html("<h1>Sorry, we couldnt find it</h1>");
+             searchRes.html("<h1><i class='fa fa-frown-o' aria-hidden='true'></i></h1>");
+             searchRes.append("<h4>Sorry, theres nothing like that.</h4>");
+
          }
      });
 

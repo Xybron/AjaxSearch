@@ -5,40 +5,27 @@
 method and stores it in $orig.*/
 $orig = $_POST['searchInput'];
 
-/*$response = array('testData' => 'Well Done My Son',
-'passed' => $orig);
 
-echo json_encode($response);
-*/
 
 $dbConnection = $query = $lastID ="";
 
+/*Function that creates the database once its called*/
 function connectToDB(){
-define("HOST", "127.0.0.1:3306");
+define("HOST", "127.0.0.1:3307");
 define("USERNAME", "root");
-define("PASSWORD", "cyberon360");
+define("PASSWORD", "");
 define("DB", "webtechclass");
 
 global $dbConnection;
 $dbConnection = new mysqli(HOST, USERNAME, PASSWORD, DB);
 
-/*if($dbConnection->connect_error){
-    die("Connection failed: " . $dbConnection->connect_error);
-}
-echo "Successfully connected";*/
 }
 
 function select_query($keyword){
     global $dbConnection, $query;
     $query = 'SELECT username, gender, color FROM webtechtable WHERE(username LIKE '. "'%$keyword%'" .') ';
     $result = $dbConnection->query($query);
-    /*if($result == true)
-    echo "Selection works";
-    else echo "Check selection";
-    */
-   // $row = $result->fetch_assoc();
-   /* echo 'LastID :' . $GLOBALS['lastID'];
-    echo "Tank Volume : " . $row["tank_Volume"];*/
+   
 return $result;
 }
 
